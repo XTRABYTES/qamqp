@@ -15,7 +15,8 @@ QString QAmqpExchangePrivate::typeToString(QAmqpExchange::ExchangeType type)
     case QAmqpExchange::Direct: return QLatin1String("direct");
     case QAmqpExchange::FanOut: return QLatin1String("fanout");
     case QAmqpExchange::Topic: return QLatin1String("topic");
-    case QAmqpExchange::Headers: return QLatin1String("headers");
+    case QAmqpExchange::Deduplication: return QLatin1String("x-message-deduplication");
+    case QAmqpExchange::Headers: return QLatin1String("headers");   
     }
 
     return QLatin1String("direct");
